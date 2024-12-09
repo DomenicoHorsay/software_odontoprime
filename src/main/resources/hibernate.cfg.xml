@@ -1,0 +1,17 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurações de conexão do banco -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/sistema_odontologico</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Registra a classe da entidade -->
+        <mapping class="org.project.entity.Paciente"/>
+        <mapping class="org.project.entity.Dentista"/>
+        <mapping class="org.project.entity.Consulta"/>
+        <mapping class="org.project.entity.Tratamento"/>
+    </session-factory>
+</hibernate-configuration>
